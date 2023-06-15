@@ -13,15 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ControllerCalculator {
     @Autowired
     private ICalculatorService iCalculatorService;
-        @GetMapping("")
+
+    @GetMapping("")
     public String greeting() {
         return "index";
     }
 
-    @PostMapping ("/calculator")
-    public String getMoney(@RequestParam Double usd,@RequestParam Double tiGia, Model model) {
+    @PostMapping("/calculator")
+    public String getMoney(@RequestParam Double usd, @RequestParam Double tiGia, Model model) {
 
-        model.addAttribute("usd", iCalculatorService.getMoney(usd,tiGia));
+        model.addAttribute("usd", iCalculatorService.getMoney(usd, tiGia));
         return "index";
     }
 }

@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 public class CalculatorService implements ICalculatorService {
     @Override
     public String getMoney(Double usd, Double tiGia) {
-        String tienTe= String.valueOf(usd*tiGia);
-        if (usd*tiGia<0){
+        String tienTe = String.valueOf(usd * tiGia);
+        if (usd * tiGia < 0) {
             return "Sai định dạng tiền tệ";
         }
         return tienTe;
