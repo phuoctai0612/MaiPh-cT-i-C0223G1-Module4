@@ -1,6 +1,8 @@
 package com.example.bai_tap_2.controller;
 
 
+import com.example.bai_tap_2.service.ITuDienService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,8 @@ import java.util.*;
 
 @Controller
 public class TuDienController {
+    @Autowired
+    private ITuDienService tuDienService;
     @GetMapping("")
     public String tuDien() {
         return "index";
@@ -18,15 +22,15 @@ public class TuDienController {
 
     @GetMapping("tuDienCuaTai")
     public String tuDienTiengViet(@RequestParam String tiengViet, Model model) {
-        HashMap<String, String> hashMap = new LinkedHashMap<>();
-        hashMap.put("Thiên tài", "Genius");
-        hashMap.put("Tấc nơ", "Bow inch");
-        hashMap.put("Căng thẳng", "stress");
-        hashMap.put("Target", "Mục tiêu");
-        hashMap.put("Ngu", "Stupid");
-        for (String s : hashMap.keySet()) {
+       Map<String, String> stringMap = tuDienService.layTuDien();
+        stringMap.put("Thiên tài", "Genius");
+        stringMap.put("Tấc nơ", "Bow inch");
+        stringMap.put("Căng thẳng", "stress");
+        stringMap.put("Target", "Mục tiêu");
+        stringMap.put("Ngu", "Stupid");
+        for (String s : stringMap.keySet()) {
             if (s.equals(tiengViet)) {
-                model.addAttribute("kiTu", hashMap.get(s));
+                model.addAttribute("kiTu", stringMap.get(s));
                 return "index";
             }
         }
