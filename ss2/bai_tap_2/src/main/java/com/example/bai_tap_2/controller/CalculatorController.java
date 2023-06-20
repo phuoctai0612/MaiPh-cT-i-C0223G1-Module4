@@ -19,7 +19,8 @@ public class CalculatorController {
     }
 
     @PostMapping("/calculation")
-    public String getParam(@RequestParam(required = false, value = "calculations") String calculations, @RequestParam(required = false, value = "param1") Double param1, @RequestParam(required = false, value = "param2") Double param2, Model model) {
+    public String getParam(@RequestParam(required = false, value = "calculations") String calculations, @RequestParam(defaultValue = "a", value = "param1") Double param1, @RequestParam(defaultValue = "a", value = "param2") Double param2, Model model) {
+
         String result = iCalculatorService.calculator(calculations, param1, param2);
         model.addAttribute("result", result);
         return "index";

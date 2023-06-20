@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f74b43fc-e64c-4969-8b31-e0f86a8a9e9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.idea/bai_tap_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_1/src/main/java/com/example/thuc_hanh_2/controller/ControllerCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_1/src/main/java/com/example/thuc_hanh_2/controller/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/controller/TuDienController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/controller/TuDienController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/repository/impl/TuDienRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/repository/impl/TuDienRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/service/ITuDienService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/service/ITuDienService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/service/impl/TuDienService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/classes/java/main/com/example/bai_tap_2/service/impl/TuDienService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/libs/bai_tap_2-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/libs/bai_tap_2-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/controller/TuDienController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/controller/TuDienController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/repository/impl/TuDienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/repository/impl/TuDienRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/service/ITuDienService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/service/ITuDienService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/service/impl/TuDienService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/bai_tap_2/src/main/java/com/example/bai_tap_2/service/impl/TuDienService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/thuc_hanh_1" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/thuc_hanh_1" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2RGtS8qCVfDTMdPgVPik1W8ZTqt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss1/bai_tap_1" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f74b43fc-e64c-4969-8b31-e0f86a8a9e9f" name="Changes" comment="" />
+      <created>1686888245163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686888245163</updated>
+      <workItem from="1686888247963" duration="17000" />
+    </task>
+    <servers />
+  </component>
+</project>

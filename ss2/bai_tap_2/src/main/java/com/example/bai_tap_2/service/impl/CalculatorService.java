@@ -12,19 +12,25 @@ public class CalculatorService implements ICalculatorService {
         if (param1 == null || param2 == null) {
             return error;
         }
-        if (calculation.equals("")) {
-            return "Bạn phải chọn phép tính";
-        } else if (calculation.equals("+")) {
-            result = String.valueOf(param1 + param2);
-        } else if (calculation.equals("-")) {
-            result = String.valueOf(param1 - param2);
-        } else if (calculation.equals("*")) {
-            result = String.valueOf(param1 * param2);
-        } else if (calculation.equals("/")) {
-            if (param2 == 0) {
-                return "Không được chia cho 0";
-            }
-            result = String.valueOf(param1 / param2);
+
+        switch (calculation) {
+            case "":
+                return "Bạn phải chọn phép tính";
+            case "+":
+                result = String.valueOf(param1 + param2);
+                break;
+            case "-":
+                result = String.valueOf(param1 - param2);
+                break;
+            case "*":
+                result = String.valueOf(param1 * param2);
+                break;
+            case "/":
+                if (param2 == 0) {
+                    return "Không được chia cho 0";
+                }
+                result = String.valueOf(param1 / param2);
+                break;
         }
         return result;
     }

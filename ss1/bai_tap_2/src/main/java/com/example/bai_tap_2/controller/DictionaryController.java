@@ -17,7 +17,7 @@ public class DictionaryController {
         return "index";
     }
 
-    @GetMapping("tuDienCuaTai")
+    @GetMapping("dictionary")
     public String DictionaryVietNamese(@RequestParam String tiengViet, Model model) {
        String check= dictionaryService.searchDictionary(tiengViet);
        if (check!=null){

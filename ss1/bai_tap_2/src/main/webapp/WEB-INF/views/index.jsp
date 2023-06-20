@@ -7,7 +7,7 @@
 <body>
 <center>
 <div style="padding-top: 50px">
-<form action="tuDienCuaTai">
+<form action="dictionary">
     Việt Nam: <input type="text" placeholder="Vietnamese" name="tiengViet">
     <button type="submit">Tra</button>
 </form>
