@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head">
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
 <h3>Customers</h3>
+
 <p>
     <a th:href="@{/create}">
         Add new customer
     </a>
 </p>
+<form action="/searchProduct" method="get">
+    <div>
+        <input style="width: 50%" type="text" name="search">
+        <button type="submit">Tìm kiếm</button>
+    </div>
+</form>
 <div class="notify">
     <div th:if="${msg!=null}">
         <span th:text="${msg}"></span>
     </div>
 </div>
-<table id = "customers">
+<table id="customers">
     <thead>
     <tr>
         <th>STT</th>
@@ -22,6 +34,7 @@
         <th>Price</th>
         <th>Status</th>
         <th>Company</th>
+        <th>Edit</th>
         <th>Delete</th>
         <th>View</th>
     </tr>
@@ -42,3 +55,5 @@
 <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>
+
+

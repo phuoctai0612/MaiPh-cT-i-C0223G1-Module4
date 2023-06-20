@@ -13,13 +13,13 @@ import java.util.Map;
 public class ProductRepositoryImpl implements IProductRepository {
     private List<Product> productList=new ArrayList<Product>(){
         {
-            add(new Product(1,"Iphone",10000.0,"Đẹp","Iphone"));
+            add(new Product(1,"Apple",10000.0,"Đẹp","Iphone"));
             add(new Product(2,"Iphone",123000.0,"Đẹp","Iphone"));
-            add(new Product(3,"Iphone",1345000.0,"Đẹp","Iphone"));
-            add(new Product(4,"Iphone",1450000.0,"Đẹp","Iphone"));
-            add(new Product(5,"Iphone",4550000.0,"Đẹp","Iphone"));
-            add(new Product(6,"Iphone",45000.0,"Đẹp","Iphone"));
-            add(new Product(7,"Iphone",4545000.0,"Đẹp","Iphone"));
+            add(new Product(3,"Banh",1345000.0,"Đẹp","Iphone"));
+            add(new Product(4,"Keo",1450000.0,"Đẹp","Iphone"));
+            add(new Product(5,"aBc",4550000.0,"Đẹp","Iphone"));
+            add(new Product(6,"ASdB",45000.0,"Đẹp","Iphone"));
+            add(new Product(7,"ball",4545000.0,"Đẹp","Iphone"));
             add(new Product(8,"Iphone",345000.0,"Đẹp","Iphone"));
             add(new Product(9,"Iphone",345000.0,"Đẹp","Iphone"));
             add(new Product(10,"Iphone",3452000.0,"Đẹp","Iphone"));
@@ -58,5 +58,16 @@ public class ProductRepositoryImpl implements IProductRepository {
     @Override
     public void remove(int id) {
       productList.remove(id);
+    }
+
+    @Override
+    public List<Product> findList(String search) {
+        List<Product> list=new ArrayList<>();
+        for (Product p: productList) {
+            if (p.getName().contains(search)){
+                list.add(p);
+            }
+        }
+        return list;
     }
 }
