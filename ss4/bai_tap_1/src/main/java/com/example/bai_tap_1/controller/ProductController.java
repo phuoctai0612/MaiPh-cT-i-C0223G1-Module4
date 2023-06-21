@@ -32,30 +32,43 @@ public class ProductController {
 
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable int id, RedirectAttributes redirectAttributes) {
-        productService.remove(id);
-        redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
+        Product product= productService.findById(id);
+        if (product==null){
+            redirectAttributes.addFlashAttribute("msg", "Xóa thất bại");
+        }else {
+            productService.remove(id);
+            redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
+        }
         return "redirect:/";
     }
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("product", productService.findById(id));
+        Product product = productService.findById(id);
+        if(product == null){
+            model.addAttribute("msg","Không tìm thấy id này");
+            return "list";
+        }else {
+            model.addAttribute("product", productService.findById(id));
+        }
         return "/edit";
     }
     @GetMapping("/{id}/view")
     public String view(@PathVariable int id, Model model) {
-        model.addAttribute("product", productService.findById(id));
+        Product product= productService.findById(id);
+        if (product==null){
+            model.addAttribute("msg","Không tìm thấy id này");
+            return "list";
+        }else {
+            model.addAttribute("product", productService.findById(id));
+        }
+
         return "/view";
     }
 
     @GetMapping("/searchProduct")
     public String searchProduct(@RequestParam String search, Model model) {
-        List<Product> list;
-        if (search.equals("")) {
-            list = productService.findAll();
-        } else {
-            list = productService.findList(search);
-        }
+        List<Product> list = productService.findList(search);
         model.addAttribute("productList", list);
         return "/list";
     }
