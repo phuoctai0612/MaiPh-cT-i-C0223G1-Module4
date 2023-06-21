@@ -14,15 +14,15 @@ public class ProductRepositoryImpl implements IProductRepository {
     private List<Product> productList=new ArrayList<Product>(){
         {
             add(new Product(1,"Apple",10000.0,"Đẹp","Iphone"));
-            add(new Product(2,"Iphone",123000.0,"Đẹp","Iphone"));
-            add(new Product(3,"Banh",1345000.0,"Đẹp","Iphone"));
-            add(new Product(4,"Keo",1450000.0,"Đẹp","Iphone"));
-            add(new Product(5,"aBc",4550000.0,"Đẹp","Iphone"));
-            add(new Product(6,"ASdB",45000.0,"Đẹp","Iphone"));
-            add(new Product(7,"ball",4545000.0,"Đẹp","Iphone"));
-            add(new Product(8,"Iphone",345000.0,"Đẹp","Iphone"));
-            add(new Product(9,"Iphone",345000.0,"Đẹp","Iphone"));
-            add(new Product(10,"Iphone",3452000.0,"Đẹp","Iphone"));
+            add(new Product(2,"Iphone",123000.0,"Đẹp","Android"));
+            add(new Product(3,"Banh",1345000.0,"Đẹp","Cookie"));
+            add(new Product(4,"Keo",1450000.0,"Đẹp","Candy"));
+            add(new Product(5,"aBc",4550000.0,"Đẹp","ABc"));
+            add(new Product(6,"Laptop",45000.0,"Đẹp","Asus"));
+            add(new Product(7,"ball",4545000.0,"CD","DragonBall"));
+            add(new Product(8,"BatMan",345000.0,"Rich","0-3"));
+            add(new Product(9,"Naruto",345000.0,"CD","0-3"));
+            add(new Product(10,"PC",3452000.0,"Đẹp","Predator"));
         }
     };
 

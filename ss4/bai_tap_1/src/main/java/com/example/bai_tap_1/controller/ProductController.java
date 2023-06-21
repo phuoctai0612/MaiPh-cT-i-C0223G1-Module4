@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.jar.Attributes;
 
 @Controller
+@RequestMapping("product")
 public class ProductController {
     @Autowired
     private IProductService productService;
@@ -30,7 +31,7 @@ public class ProductController {
         return "/create";
     }
 
-    @GetMapping("/{id}/delete")
+    @GetMapping("/delete/{id}")
     public String delete(@PathVariable int id, RedirectAttributes redirectAttributes) {
         Product product= productService.findById(id);
         if (product==null){
@@ -39,10 +40,10 @@ public class ProductController {
             productService.remove(id);
             redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
         }
-        return "redirect:/";
+        return "redirect:/product";
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("/edit/{id}")
     public String edit(@PathVariable int id, Model model) {
         Product product = productService.findById(id);
         if(product == null){
@@ -53,7 +54,7 @@ public class ProductController {
         }
         return "/edit";
     }
-    @GetMapping("/{id}/view")
+    @GetMapping("/view/{id}")
     public String view(@PathVariable int id, Model model) {
         Product product= productService.findById(id);
         if (product==null){

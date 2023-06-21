@@ -18,7 +18,7 @@
     </a>
 </p>
 <div id="form">
-    <form th:action="@{/createProduct}" th:object="${product}"
+    <form th:action="@{/product/createProduct}" th:object="${product}"
           method="POST" novalidate="novalidate">
         <input type="hidden" th:field="*{id}"/>
         <div>

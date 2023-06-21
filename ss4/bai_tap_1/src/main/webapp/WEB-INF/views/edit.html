@@ -9,7 +9,7 @@
 </head>
 <body>
 <table border="1">
-    <form th:action="@{/editProduct}" th:object="${product}" method="post" novalidate="novalidate">
+    <form th:action="@{/product/editProduct}" th:object="${product}" method="post" novalidate="novalidate">
         <input type="hidden"  th:field="*{id}">
         <tr>
             <th>Name Product</th>
