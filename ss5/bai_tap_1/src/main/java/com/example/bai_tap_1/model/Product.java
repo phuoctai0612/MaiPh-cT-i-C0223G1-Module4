@@ -1,13 +1,12 @@
 package com.example.bai_tap_1.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
     public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
         private Integer id;
         private String name;
         private Double price;

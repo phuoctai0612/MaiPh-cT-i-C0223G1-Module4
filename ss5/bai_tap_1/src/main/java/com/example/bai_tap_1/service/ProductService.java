@@ -2,56 +2,46 @@ package com.example.bai_tap_1.service;
 
 import com.example.bai_tap_1.model.Product;
 import com.example.bai_tap_1.repository.ConnectionUtils;
+import com.example.bai_tap_1.repository.IProductRepository;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class ProductService implements IProductService{
-private final static String SELECT_ALL_PRODUCT="form Product";
+@Service
+public class ProductService implements IProductService {
+    @Autowired
+    private IProductRepository iProductRepository;
+
     @Override
     public List<Product> findAll() {
-        return null;
+        return iProductRepository.findAll();
     }
 
     @Override
     public void save(Product product) {
-        Session session=null;
-        Transaction transaction=null;
-        try {
-            session= ConnectionUtils.getSessionFactory().openSession();
-            transaction=session.beginTransaction();
-            session.save(product);
-            transaction.commit();
-        }catch (Exception e){
-            e.printStackTrace();
-            if (transaction!=null){
-                transaction.rollback();
-            }
-        }finally {
-            if (session!=null){
-                session.close();
-            }
-        }
+        iProductRepository.save(product);
     }
 
     @Override
     public Product findById(int id) {
-        return null;
+        return iProductRepository.findById(id);
     }
 
     @Override
-    public void update(int id, Product product) {
-
+    public void update( Product product) {
+       iProductRepository.update(product);
     }
 
     @Override
-    public void remove(int id) {
-
+    public void remove(Product product) {
+        iProductRepository.remove(product);
     }
 
     @Override
     public List<Product> findList(String search) {
-        return null;
+        return iProductRepository.findList(search);
     }
 }
