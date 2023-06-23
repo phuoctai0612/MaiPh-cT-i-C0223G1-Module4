@@ -1,4 +1,4 @@
-package com.example.bai_tap_1.model;
+package com.example.bai_tap_2.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,25 +15,29 @@ public class Blog {
     private String nameBloger;
     private String img;
     private LocalDateTime timeStarBlog;
-
+    @ManyToOne
+    @JoinColumn(name = "category_id",nullable = false)
+    private Category category;
+    private boolean idFlagDelete;
     public Blog() {
     }
 
-    public Blog(String title, String content, String nameBloger,  String img,LocalDateTime timeStarBlog) {
+    public Blog(String title, String content, String nameBloger,  String img,LocalDateTime timeStarBlog,boolean idFlagDelete) {
         this.title = title;
         this.content = content;
         this.nameBloger = nameBloger;
         this.img=img;
         this.timeStarBlog = timeStarBlog;
-
+        this.idFlagDelete=idFlagDelete;
     }
 
-    public Blog(Integer id, String title, String content, String nameBloger, LocalDateTime timeStarBlog) {
+    public Blog(Integer id, String title, String content, String nameBloger, LocalDateTime timeStarBlog,boolean idFlagDelete) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.nameBloger = nameBloger;
         this.timeStarBlog = timeStarBlog;
+        this.idFlagDelete=idFlagDelete;
     }
 
     public Integer getId() {
@@ -84,4 +88,19 @@ public class Blog {
         this.nameBloger = name_bloger;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public boolean isIdFlagDelete() {
+        return idFlagDelete;
+    }
+
+    public void setIdFlagDelete(boolean idFlagDelete) {
+        this.idFlagDelete = idFlagDelete;
+    }
 }

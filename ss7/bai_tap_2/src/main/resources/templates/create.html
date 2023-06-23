@@ -29,8 +29,14 @@
         <input type="text" th:field="*{nameBloger}"/>
     </div>
     <div>
-        <p>Image</p>
+        <p>Image: </p>
         <input type="file" placeholder="Cho file ảnh của bạn vào đây">
+    </div>
+    <div>
+        <p>Category</p>
+        <select th:field="*{category}" >
+            <option th:each="cate,loop :${listCate}" th:value="${cate.id}" th:text="${cate.name}"></option>
+        </select>
     </div>
     <input type="submit" value="Save"/>
 </form>

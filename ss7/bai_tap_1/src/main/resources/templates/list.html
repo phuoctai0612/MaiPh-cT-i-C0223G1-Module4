@@ -14,7 +14,7 @@
     </form>
 </div>
 <div th:if="${msg!=null}">
-    <p style="color: green" th:text="${msg}"></p>
+    <p  th:text="${msg}"></p>
 </div>
 
 <table class="table table-view table-row-cell">
@@ -49,6 +49,17 @@
     </tr>
     </tbody>
 </table>
+<!--<div th:each="blog,loop :${blogList}" class="row container " >-->
+<!--<div class="card row col-3" style="width: 18rem; padding-left: 20px;border-radius: 5%" >-->
+<!--    <img th:src="${blog.img}" class="card-img-top" alt="...">-->
+<!--    <div class="card-body">-->
+<!--        <h5 class="card-title" th:text="${blog.title}"></h5>-->
+<!--        <p class="card-text">Tác giả</p>-->
+<!--        <p class="card-text" th:text="${blog.nameBloger}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--        <a href="#" class="btn btn-primary">Chi tiết</a>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
 <form action="/blog/create" method="get">
     <button class="btn btn-primary" type="submit">Create</button>
 </form>
