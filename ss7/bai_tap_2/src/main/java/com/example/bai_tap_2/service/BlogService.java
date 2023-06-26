@@ -10,34 +10,34 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BlogService implements IBlogService{
+public class BlogService implements IBlogService {
     @Autowired
     private IBlogRepository iBlogRepository;
 
 
     @Override
     public void createBlog(Blog blog) {
-         iBlogRepository.save(blog);
+        iBlogRepository.save(blog);
     }
 
     @Override
     public void deleteBlog(Blog blog) {
-      iBlogRepository.save(blog);
+        iBlogRepository.save(blog);
     }
 
     @Override
     public void editBlog(Blog blog) {
-     iBlogRepository.save(blog);
+        iBlogRepository.save(blog);
     }
 
     @Override
-    public Page<Blog> getListSearch(String name,String category,Pageable pageable) {
-        return iBlogRepository.searchBlog(name,category,pageable);
+    public Page<Blog> getListSearch(String name, String category, Pageable pageable) {
+        return iBlogRepository.searchBlog(name, category, pageable);
     }
 
     @Override
     public Blog findBlogByID(int id) {
-          return iBlogRepository.findById(id).orElse(null);
+        return iBlogRepository.findById(id).orElse(null);
 
     }
 

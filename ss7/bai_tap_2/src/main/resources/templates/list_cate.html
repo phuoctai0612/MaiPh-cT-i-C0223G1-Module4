@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/cate/create" method="get">
+    <button class="btn btn-primary" type="submit">Create</button>
+</form>
+<table>
+    <tr>
+        <td>STT</td>
+        <td>Name Category</td>
+        <td>Delete</td>
+        <td>Edit</td>
+    </tr>
+    <tr th:each="cate,loop :${cate}">
+        <th th:text="${loop.count}"></th>
+        <th  th:text="${cate.id}" hidden></th>
+        <th  th:text="${cate.name}" ></th>
+        <th>
+        <a th:href="@{/cate/delete/{id}(id=${cate.id})}">
+            <button class="btn btn-primary" type="submit">Delete</button>
+        </a></th>
+        <th>
+        <a th:href="@{/cate/edit/{id}(id=${cate.id})}">
+            <button class="btn btn-primary" type="submit">Edit</button>
+        </a></th>
+    </tr>
+</table>
+</body>
+</html>

@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 @Controller
 @RequestMapping("blog")
 public class BlogController {
@@ -27,7 +28,7 @@ public class BlogController {
 
     @GetMapping("")
     public String getList(@PageableDefault (sort = "timeStarBlog",direction = Sort.Direction.ASC)Pageable pageable, Model model) {
-        model.addAttribute("listCate",iCategoryService.getAllCate());
+        model.addAttribute("listCate",iCategoryService.findBlogByIdFlagDeleteIsFalse());
         Page<Blog> blogList = iBlogService.findBlogByIdFlagDeleteIsFalse(pageable);
         model.addAttribute("blogList", blogList);
         return "list";
@@ -35,7 +36,7 @@ public class BlogController {
 
     @GetMapping("create")
     public String createBlog(Model model) {
-        model.addAttribute("listCate",iCategoryService.getAllCate());
+        model.addAttribute("listCate",iCategoryService.findBlogByIdFlagDeleteIsFalse());
         model.addAttribute("blog", new Blog());
         return "create";
     }
@@ -84,7 +85,7 @@ public class BlogController {
     @GetMapping("search")
     public String search(@PageableDefault() Pageable pageable,@RequestParam(required = false,defaultValue = "") String name,
                          @RequestParam(required = false,defaultValue = "") String category, Model model) {
-        model.addAttribute("listCate",iCategoryService.getAllCate());
+        model.addAttribute("listCate",iCategoryService.findBlogByIdFlagDeleteIsFalse());
         model.addAttribute("blogList", iBlogService.getListSearch(name,category,pageable));
         return "list";
     }

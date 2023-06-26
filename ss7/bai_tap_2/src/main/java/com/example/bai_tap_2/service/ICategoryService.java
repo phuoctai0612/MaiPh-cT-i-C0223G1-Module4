@@ -8,6 +8,10 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface ICategoryService {
-    List<Category> getAllCate();
 
+    void createBlog(Category category);
+    void deleteBlog(Category category);
+    void editBlog(Category category);
+    Category findBlogByID(int id);
+    List<Category> findBlogByIdFlagDeleteIsFalse();
 }

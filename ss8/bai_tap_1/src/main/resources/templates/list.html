@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<button class="btn btn-primary"><a href="/user/create" style="color: black">Thêm mới</a></button>
+<body>
+<div th:if="${msg != null}">
+    <p th:text="${msg}"></p>
+</div>
+<table class="table-view  table-row-cell">
+    <tr>
+        <td>STT</td>
+        <td>Tên đầu</td>
+        <td>Tên cuối</td>
+        <td>Số điện thoại</td>
+        <td>Tuổi</td>
+        <td>Email</td>
+    </tr>
+    <tr th:each="user,loop :${userList}">
+        <th th:text="${loop.count}"></th>
+        <th th:text="${user.firstName}"></th>
+        <th th:text="${user.lastName}"></th>
+        <th th:text="${user.phoneNumber}"></th>
+        <th th:text="${user.age}"></th>
+        <th th:text="${user.email}"></th>
+    </tr>
+</table>
+</body>
+</html>
