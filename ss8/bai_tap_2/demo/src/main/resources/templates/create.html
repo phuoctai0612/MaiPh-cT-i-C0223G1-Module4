@@ -13,19 +13,24 @@
 </head>
 <body>
 
-<form th:action="@{/app/create}" th:object="${appSong}"
+<form th:action="@{/app/create}" th:object="${appSongDto}"
       method="POST" novalidate="novalidate">
     <div >
         <p>Tên bài hát</p>
         <input type="text" th:field="*{song}"/>
+        <span th:if="${#fields.hasErrors('song')}" th:errors="*{song}"></span>
     </div>
     <div >
         <p>Nghệ sĩ</p>
         <input type="text" th:field="*{artist}"/>
+        <span th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}"></span>
+
     </div>
     <div >
         <p>Thể loại</p>
         <input type="text" th:field="*{typeSong}"/>
+        <span th:if="${#fields.hasErrors('typeSong')}" th:errors="*{typeSong}"></span>
+
     </div>
     <input type="submit" value="Save"/>
 </form>

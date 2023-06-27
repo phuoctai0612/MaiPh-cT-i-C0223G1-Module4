@@ -3,20 +3,30 @@ package com.example.demo.dto;
 import javax.validation.constraints.Pattern;
 
 public class AppSongDto {
-    @Pattern(regexp = "^(a-zA-z0-9){1,800}$")
+    private Integer id;
+    @Pattern(regexp = "^(([a-zA-z0-9]){1,10}\\s([a-zA-z0-9]){1,10}){1,40}$",message = "Phải có 1 đến 800 kí tự và không được chứa kí tự đặc biệt")
     private String song;
-    @Pattern(regexp = "^(a-zA-z0-9){1,300}$")
+    @Pattern(regexp = "^^(([a-zA-z0-9]){1,10}\\s([a-zA-z0-9]){1,10}){1,15}$",message = "Phải có 1 đến 300 kí tự và không được chứa kí tự đặc biệt")
     private String artist;
-    @Pattern(regexp = "^(a-zA-z0-9,){1,1000}(a-zA-z0-9)$")
+    @Pattern(regexp = "^([a-zA-z0-9]{1,1000},)*[a-zA-z0-9]{1,1000}$",message = "Phải có kí tự")
     private String typeSong;
 
     public AppSongDto() {
     }
 
-    public AppSongDto(String song, String artist, String typeSong) {
+    public AppSongDto(Integer id,String song, String artist, String typeSong) {
+        this.id=id;
         this.song = song;
         this.artist = artist;
         this.typeSong = typeSong;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getSong() {

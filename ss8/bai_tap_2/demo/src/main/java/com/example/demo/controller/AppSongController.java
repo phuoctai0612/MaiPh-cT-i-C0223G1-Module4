@@ -30,7 +30,7 @@ public class AppSongController {
 
     @GetMapping("create")
     public String create(Model model) {
-        model.addAttribute("appSong", new AppSongDto());
+        model.addAttribute("appSongDto", new AppSongDto());
         return "create";
     }
 
@@ -71,12 +71,13 @@ public class AppSongController {
 
     @GetMapping("delete/{id}")
     public String delete(@PathVariable int id, RedirectAttributes redirectAttributes) {
-        if (iAppSongService.findAppSongById(id) != null) {
-            iAppSongService.delete(iAppSongService.findAppSongById(id));
-            redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
+        if (iAppSongService.findAppSongById(id) == null|| iAppSongService.findAppSongById(id).isIdFlagDelete()) {
+            redirectAttributes.addFlashAttribute("msg", "Không tìm thấy Id này");
             return "redirect:/app";
         } else {
-            redirectAttributes.addFlashAttribute("msg", "Không tìm thấy Id này");
+            iAppSongService.findAppSongById(id).setIdFlagDelete(true);
+            iAppSongService.delete(iAppSongService.findAppSongById(id));
+            redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
             return "redirect:/app";
         }
     }
