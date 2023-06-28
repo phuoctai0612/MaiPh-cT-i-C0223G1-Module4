@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div th:if="${msg}">
+  <p th:text="${msg}"></p>
+</div>
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Mã sách</th>
+    <th>Thời gian bắt đầu thuê thuê</th>
+    <th>Thời gian trả</th>
+    <th>Tên sách</th>
+
+  </tr>
+  <tr th:each="book,loop:${idBookList}">
+    <td th:text="${loop.count}"></td>
+    <td th:text="${book.idBooking}"></td>
+    <td th:text="${book.timeBooking}"></td>
+    <td th:text="${book.timeReturnBook}"></td>
+    <td th:text="${book.book.name}"></td>
+  </tr>
+</table>
+</body>
+</html>

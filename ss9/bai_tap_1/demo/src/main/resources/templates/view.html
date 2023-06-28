@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/book/create"><button>Thêm mới</button></a>
+<form th:action="@{/book/return}">
+<input type="text" placeholder="Nhập mã trả sách" th:name="idReturn">
+    <button type="submit">Trả</button>
+</form>
+<div th:if="${msg}">
+    <p th:text="${msg}"></p>
+</div>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>Tên Sách</th>
+        <th>Số lượng hiện có</th>
+        <th>Xóa</th>
+        <th>Mượn</th>
+        <th>Sửa</th>
+        <th>Thêm mã cho sách</th>
+        <th>Các mã của sách này</th>
+    </tr>
+    <tr th:each="book,loop :${bookList}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.amount}"></td>
+        <td>
+            <a th:href="@{book/delete/{id}(id=${book.id})}">
+                <button style="color: black">Xóa</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{book/borrow/{id}(id=${book.id})}">
+                <button style="color: black">Mượn</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{book/edit/{id}(id=${book.id})}">
+                <button style="color: black">Sửa</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{booking/create/{id}(id=${book.id})}">Thêm mã sách</a>
+        </td>
+        <td>
+            <a th:href="@{booking/{id}(id=${book.id})}">Hiển thị danh sách mã sách</a>
+        </td>
+    </tr>
+    <a th:if="${bookList.hasPrevious()}" th:href="@{book(page=${bookList.number -1})}">Trước</a>
+    <a th:if="${bookList.hasNext()}" th:href="@{book(page=${bookList.number +1})}">Sau</a>
+</table>
+</body>
+</html>
