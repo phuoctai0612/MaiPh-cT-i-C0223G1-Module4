@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2660f7c1-776d-4a51-a3bd-5b9b90205dc9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/controller/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/java/com/example/demo/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/resources/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo1/src/main/resources/templates/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/thuc_hanh_1" beforeDir="false" afterPath="$PROJECT_DIR$/../ss1/thuc_hanh_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss9/bai_tap_1/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss9/bai_tap_1/untitled/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2RrmWNiyi22SWObM6l1hNxVrhuZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/module4/MaiPh-cT-i-C0223G1-Module4/ss10/demo1",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2660f7c1-776d-4a51-a3bd-5b9b90205dc9" name="Changes" comment="" />
+      <created>1688016604337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688016604337</updated>
+      <workItem from="1688016605486" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
