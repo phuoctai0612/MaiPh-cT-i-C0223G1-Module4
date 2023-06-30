@@ -72,9 +72,5 @@ public class ProductController {
         return "redirect:/products";
     }
 
-    @GetMapping("pay")
-    public String payProduct(HttpSession session) {
-        session.invalidate();
-        return "redirect:/shopping-cart";
-    }
+
 }
