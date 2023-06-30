@@ -38,8 +38,7 @@ public class ProductController {
 
     @GetMapping("")
     public ModelAndView showShop() {
-        ModelAndView modelAndView = new ModelAndView("/shop");
-        modelAndView.addObject("products", productService.findAll());
+        ModelAndView modelAndView = new ModelAndView("/shop","products", productService.findAll());
         return modelAndView;
     }
 

@@ -11,8 +11,9 @@ public class Product {
     @Column(columnDefinition = "mediumtext")
     private String name;
     private double price;
-
+    @Column(columnDefinition = "mediumtext")
     private String description;
+    @Column(columnDefinition = "mediumtext")
     private String img;
 
     public Product() {
