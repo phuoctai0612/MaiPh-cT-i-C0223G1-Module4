@@ -38,7 +38,7 @@ public class BlogController {
     public ResponseEntity<Blog> createBlog(@RequestBody Blog blog) {
         blog.setTimeStarBlog(LocalDateTime.now());
         iBlogService.createBlog(blog);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @DeleteMapping("{id}")
