@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div>
+<!--    <form action="/blog/search" method="get" >-->
+<!--        <input name="name" placeholder="Nhập tên bạn muốn tìm kiếm">-->
+<!--        <select name="category" >-->
+<!--            <option th:each="cate,loop :${listCate}" th:value="${cate.id}" th:text="${cate.name}"></option>-->
+<!--        </select>-->
+<!--        <button type="submit">Search</button>-->
+<!--    </form>-->
+<!--</div>-->
+<!--<div style="float: right">-->
+<!--    <a href="/cate/">Category</a>-->
+<!--</div>-->
+<!--<form action="/blog/create" method="get">-->
+<!--    <button class="btn btn-primary" type="submit">Create</button>-->
+<!--</form>-->
+<div  class=" container-fluid row" style="padding-top: 60px;display: flex">
+    <div class="card  col-3" style="width: 18rem;margin: 5px;border-radius: 5%" th:each="blog,loop :${blogList}">
+        <img th:src="${blog.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" th:text="${blog.title}"></h5>
+            <span class="card-text">Tác giả: </span>
+            <span class="card-text" th:text="${blog.nameBloger}"></span>
+            <p class="card-text">Loại: </p>
+            <span class="card-text" th:text="${blog.category.name}"></span>
+            <a href="#" class="btn btn-primary">Chi tiết</a>
+            <a th:href="@{/blog/delete/{id}(id=${blog.id})}">
+                <button class="btn btn-primary" type="submit">Delete</button>
+            </a>
+            <a th:href="@{/blog/edit/{id}(id=${blog.id})}">
+                <button class="btn btn-primary" type="submit">Edit</button>
+            </a>
+        </div>
+    </div>
+</div>
+<a th:if="${blogList.hasPrevious()}" th:href="@{/blog(page=${blogList.number -1})}">Trước</a>
+<a th:if="${blogList.hasNext()}" th:href="@{/blog(page=${blogList.number +1})}">Sau</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
