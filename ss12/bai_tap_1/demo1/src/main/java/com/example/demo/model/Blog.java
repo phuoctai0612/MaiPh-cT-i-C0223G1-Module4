@@ -12,6 +12,8 @@ public class Blog {
     @Column(columnDefinition = "longtext")
     private String content;
     private String nameBloger;
+
+    @Column(columnDefinition = "longtext")
     private String img;
     private LocalDateTime timeStarBlog;
     @ManyToOne
